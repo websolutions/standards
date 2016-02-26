@@ -87,7 +87,7 @@ HTML should be semantically written and not contain any inline CSS or JS.
 #### CSS = presentation
 [This page](https://isobar-idev.github.io/code-standards/#css_formatting_css) has some excellent basic standards for CSS, specifically the "Formatting CSS", "Specificity", "ID Selectors", "Vendor Prefixes", and "Box Model" sections.
 
-- ["Sans underscore" style BEM](https://en.bem.info/method/naming-convention/) seems to work well, but as long as *some* standard is followed when writing CSS, the resulting code should be easier to understand and maintain.
+- ["Sans underscore" style BEM](https://en.bem.info/method/naming-convention/) should be used when writing CSS to make the resulting code easier to understand and maintain.
 - ".js-" prefixed classes should rarely be referenced in CSS files.
 
 #### JS = behavior
