@@ -215,7 +215,7 @@ JS examples:
 ---
 
 ### Common Components
-#### .hlist / .vlist
+#### [.hlist / .vlist](https://github.com/websolutions/list-types)
 Horizontal and Vertical lists.
 #### [Accordions](https://github.com/websolutions/accordion)
 Content accordions that toggle content when clicked.
