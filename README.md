@@ -67,6 +67,7 @@ Thou shalt:
 - Use 2 spaces instead of tabs.
 - Use UTF-8.
 - Use LF endings.
+- Use single quotes in CSS/JS.
 - Use [semantic markup](http://www.bbc.co.uk/guidelines/futuremedia/technical/semantic_markup.shtml).
 - Use self-documenting code as much as possible, and explicitly comment
   inelegant code.
@@ -83,15 +84,19 @@ Plugins are available for most IDEs and editors.
 
 #### HTML = content
 HTML should be semantically written and not contain any inline CSS or JS.
+- Single semantic class names should be used as much as possible.
 
 #### CSS = presentation
 [This page](https://isobar-idev.github.io/code-standards/#css_formatting_css) has some excellent basic standards for CSS, specifically the "Formatting CSS", "Specificity", "ID Selectors", "Vendor Prefixes", and "Box Model" sections.
 
 - ["Sans underscore" style BEM](https://en.bem.info/method/naming-convention/) should be used when writing CSS to make the resulting code easier to understand and maintain.
+- CSS properties should be alphabetized for easier scanning.
+- With single semantic class names in the markup, pull in all needed additional styles via mixins and extends.
 - ".js-" prefixed classes should rarely be referenced in CSS files.
 
 #### JS = behavior
 - Avoid JS/jQuery animations when CSS animation can be used.
+- Main JS file should be named `[project].js`
 
 #### CSS/JS Linting
 Linting code can be helpful for both initial development and ongoing support.  Most editors and IDEs can be configured to [automatically lint your code](https://github.com/showcases/clean-code-linters).
