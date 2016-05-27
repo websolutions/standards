@@ -76,6 +76,7 @@ Thou shalt:
 - Not use tables for anything other than tabular data.  Even then, there is
   probably a better way to present it.
 - Not use repeating code whenever possible.  Be [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
+- Create a separate commit for each bug, and reference the bug ID in the commit message.
 
 [EditorConfig](http://editorconfig.org/) can be used to define and enforce these rules per project.
 Plugins are available for most IDEs and editors.
