@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font: 1em/1.5 sans-serif;
+}
+
+.cb {
+  background-color: #ececec;
+}
+
+p {
+  text-align: justify;
+  word-break: break-all;
+}
+
+a {
+  color: #fff;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+
+
+
+footer,
+footer .cb {
+  background-color: #d6d6d6;
+}
