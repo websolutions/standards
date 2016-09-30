@@ -106,6 +106,7 @@ Linting code can be helpful for both initial development and ongoing support.  M
 
 ### The Grid
 #### .section > .inner > .unit Structure
+
 Our back-end code allows end users to create column structures that utilize specific CSS classes to work:
 ```
 <div class="section">
@@ -140,6 +141,8 @@ These structures can be nested as needed, but with a single `.section` containin
 </div>
 ```
 would result (on wide screens) in 3 columns, 25%, 25%, and 50% widths respectively.
+
+See the 'grid' directory for examples.
 
 ---
 
