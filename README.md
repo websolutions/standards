@@ -156,7 +156,32 @@ Columns display "cards" in top-to-bottom, left-to-right order like this (on a wi
 A C E G
 B D F H
 ```
-This can be achieved using CSS multi-columns. If support for IE 9 and earlier are needed, use a polyfill such as [this one](https://github.com/hamsterbacke23/multicolumn-polyfill). 
+This can be achieved using CSS multi-columns. If support for IE 9 and earlier are needed, use a polyfill such as [this one](https://github.com/hamsterbacke23/multicolumn-polyfill). Using the example above, the code would be something like:
+```
+<div class="columns">
+  <div class="card">A</div>
+  <div class="card">B</div>
+  <div class="card">C</div>
+  <div class="card">D</div>
+  <div class="card">E</div>
+  <div class="card">F</div>
+  <div class="card">G</div>
+  <div class="card">H</div>
+</div>
+
+.columns {
+  -webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+}
+
+.card {
+  display: inline-block;
+}
+```
 
 ##### Grids
 Grids display "cards" in left-to-right, top-to-bottom order like this (on a wide enough breakpoint):
