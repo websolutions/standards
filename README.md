@@ -241,52 +241,7 @@ We have used a "block grid" for things just as media galleries, but there are a 
     /utilities
 ```
 
-We have a back-end process (Package Manager) that will compile SASS, minify, and concatenate files into user configured bundles that are included by the Master template.
-
----
-
-### Configuration Files
-#### *.Variables.config
-XML document that allows variables to be used through out JS/SASS/CSS files for consistency.  For example, we can set the max-width of the content area to variable:
-```
-<Variable>
-  <Name>$max-width</Name>
-  <Value>68em</Value>
-</Variable>
-```
-#### *.Packages.config
-XML document that groups JS/SASS/CSS files together into pacakges that can be concatenated and minified.  Generally, we have one CSS file with all of the compiled SASS, and two JS files; one to be included in `<head>` with critical JS (such as jQuery and Modernizr), and one to be included at the end of the document with all other JS (plugins, site-specific JS, etc.).
-
-CSS example:
-```
-<Package xsi:type="CssPackage" Name="site.css" Combine="true" Minify="true">
-  <Bundle MediaQuery="">
-    <Resource Source="/core/components/wsol-tabs/css/wsol.tabs.css" />
-    <Resource Source="/core/scss/site.scss" />
-  </Bundle>
-</Package>
-```
-
-JS examples:
-```
-<Package xsi:type="JsPackage" Name="site.head.js" Combine="true" Minify="true">
-  <Resource Source="/core/components/jquery/dist/jquery.js" />
-  <Resource Source="/core/components/modernizr/modernizr.js" />
-</Package>
-```
-```
-<Package xsi:type="JsPackage" Name="naperville.js" Combine="false" Minify="false">
-  <!-- Components -->
-  <Resource Source="/core/components/enquire/dist/enquire.js" />
-  <Resource Source="/core/components/wsol-appendaround/js/wsol.appendaround.js" />
-  <Resource Source="/core/components/wsol-equal-heights/js/wsol.equalHeights.js" />
-  <Resource Source="/core/components/wsol-tabs/js/wsol.tabs.js" />
-  <Resource Source="/core/components/wsol-accordion/js/wsol.accordion.js" />
-  <!-- Site-specific scripts -->
-  <Resource Source="/core/js/plugins.js" />
-  <Resource Source="/core/js/wsol.js" />
-</Package>
-```
+Gulp tasks should be set up to compile SASS, minify, and concatenate asset files.
 
 ---
 
