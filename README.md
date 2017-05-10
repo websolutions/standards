@@ -171,8 +171,8 @@ This can be achieved using CSS multi-columns. If support for IE 9 and earlier ar
 
 .columns {
   -webkit-column-count: 2;
-	-moz-column-count: 2;
-	column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
   -webkit-column-gap: 40px;
   -moz-column-gap: 40px;
   column-gap: 40px;
