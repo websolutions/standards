@@ -43,6 +43,7 @@ We have dev boxes set up with various versions of Internet Explorer to test with
 - ie8.wsoldev.com
 - ie9.wsoldev.com
 - ie10.wsoldev.com
+- ie11.wsoldev.com
 
 You can also use local virtual machines to test using:
 - [VirtualBox](VirtualBox), and
@@ -76,7 +77,7 @@ Thou shalt:
 - Not use tables for anything other than tabular data.  Even then, there is
   probably a better way to present it.
 - Not use repeating code whenever possible.  Be [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
-- Create a separate commit for each bug, and reference the bug ID in the commit message.
+- Create a separate feature branch for each bug using the bug ID.
 
 [EditorConfig](http://editorconfig.org/) can be used to define and enforce these rules per project.
 Plugins are available for most IDEs and editors.
@@ -143,6 +144,47 @@ These structures can be nested as needed, but with a single `.section` containin
 would result (on wide screens) in 3 columns, 25%, 25%, and 50% widths respectively.
 
 See the 'grid' directory for examples.
+
+---
+
+#### Columns and Grids
+To simplify back-end code and resulting markup, consider using CSS for columns and grids.
+
+##### Columns
+Columns display "cards" in top-to-bottom, left-to-right order like this (on a wide enough breakpoint):
+```
+A C E G
+B D F H
+```
+This can be achieved using CSS multi-columns. If support for IE 9 and earlier are needed, use a polyfill such as [this one](https://github.com/hamsterbacke23/multicolumn-polyfill). 
+
+##### Grids
+Grids display "cards" in left-to-right, top-to-bottom order like this (on a wide enough breakpoint):
+```
+A B C D
+E F G H
+```
+This can be achieved by floating all of the "cards" left, and then clearing the appropriate "cards" with the `:nth-of-type()` pseudo-class. Note that this does not generate equal heights. Using the example above, the code would be something like:
+```
+<div class="grid">
+  <div class="card">A</div>
+  <div class="card">B</div>
+  <div class="card">C</div>
+  <div class="card">D</div>
+  <div class="card">E</div>
+  <div class="card">F</div>
+  <div class="card">G</div>
+  <div class="card">H</div>
+</div>
+
+.item {
+  float: left;
+}
+
+  .item:nth-of-type(4n+1) {
+    clear: left;
+  }
+```
 
 ---
 
