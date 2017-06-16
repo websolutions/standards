@@ -222,6 +222,7 @@ We have used a "block grid" for things just as media galleries, but there are a 
 `/core` is the Design Team's home.  All CSS and JS live in this directory.  A standard setup would be along the lines of:
 ```
 /core
+  /compiled
   /components
     /enquire
     /jquery
@@ -241,7 +242,7 @@ We have used a "block grid" for things just as media galleries, but there are a 
     /utilities
 ```
 
-Gulp tasks should be set up to compile SASS, minify, and concatenate asset files.
+Gulp tasks should be set up to compile SASS, minify, and concatenate asset files, which output to `/core/compiled`
 
 ---
 
