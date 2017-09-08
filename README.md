@@ -179,7 +179,7 @@ This can be achieved using CSS multi-columns. If support for IE 9 and earlier ar
 }
 
 .card {
-  display: inline-block;
+  display: block;
 }
 ```
 
