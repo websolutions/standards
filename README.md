@@ -202,11 +202,11 @@ This can be achieved by floating all of the "cards" left, and then clearing the 
   <div class="card">H</div>
 </div>
 
-.item {
+.card {
   float: left;
 }
 
-  .item:nth-of-type(4n+1) {
+  .card:nth-of-type(4n+1) {
     clear: left;
   }
 ```
