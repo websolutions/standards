@@ -8,19 +8,19 @@ important pieces of development.
 
 ### Device and Browser Support
 A project SOW may declare required support. If not, we support "modern"
-default browsers using modern Operating Systems. As of Nov 2015, that list
+default browsers using modern Operating Systems. As of Mar 2018, that list
 includes:
-- Internet Explorer 9+
-- Microsoft Edge
-- Google Chrome 43+
-- Mozilla Firefox 40+
-- Safari 8+
+- Internet Explorer 11 (Windows 7/10)
+- Microsoft Edge (Windows 10)
+- Google Chrome 62+
+- Mozilla Firefox 57+
+- Safari 10+ (macOS High Sierra)
 
 
-- Windows 7+
-- OSX 10.9+
-- iOS 8+
-- Android 4.3+
+- Windows 10+
+- OSX 10.10+
+- iOS 11.2+
+- Android 5.1+
 
 This list is not meant to be definitive, just an example of what is meant by
 "modern" browsers (actively supported, widely used, etc.).
@@ -189,7 +189,7 @@ Grids display "cards" in left-to-right, top-to-bottom order like this (on a wide
 A B C D
 E F G H
 ```
-This can be achieved by floating all of the "cards" left, and then clearing the appropriate "cards" with the `:nth-of-type()` pseudo-class. Note that this does not generate equal heights. Using the example above, the code would be something like:
+This can be achieved using flexbox. Using the example above, the code would be something like:
 ```
 <div class="grid">
   <div class="card">A</div>
@@ -202,13 +202,17 @@ This can be achieved by floating all of the "cards" left, and then clearing the 
   <div class="card">H</div>
 </div>
 
-.card {
-  float: left;
+.grid {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-  .card:nth-of-type(4n+1) {
-    clear: left;
-  }
+.card {
+  width: 20%;
+}
 ```
 
 ---
@@ -233,6 +237,7 @@ We have used a "block grid" for things just as media galleries, but there are a 
     /content
     /ui
   /js
+    /modules
     [site].js
   /scss
     /base
@@ -254,7 +259,7 @@ Content accordions that toggle content when clicked.
 #### [Tabs](https://github.com/websolutions/tabs)
 Content tabs that toggle content when clicked.
 #### [EqualHeights](https://github.com/websolutions/equal-heights)
-JS solution to float drops.  Potential alternative with using .block-grid ([see above](#-block-grid)), but that has it's own flaws.
+JS solution to float drops when not using flexbox.
 #### [AppendAround](https://github.com/websolutions/append-around)
 JS solution for moving HTML nodes to elsewhere in the DOM at breakpoints.  Potential alternative with using CSS flexbox when that has wider support.
 #### [Media Blocks](https://jsfiddle.net/jnky3yc1/)
