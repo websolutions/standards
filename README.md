@@ -8,22 +8,23 @@ important pieces of development.
 
 ### Device and Browser Support
 A project SOW may declare required support. If not, we support "modern"
-default browsers using modern Operating Systems. As of Mar 2018, that list
-includes:
-- Internet Explorer 11 (Windows 7/10)
-- Microsoft Edge (Windows 10)
-- Google Chrome 62+
-- Mozilla Firefox 57+
-- Safari 10+ (macOS High Sierra)
+browsers using modern Operating Systems. As of Jan 2019, that list includes:
+
+- Internet Explorer 11
+- Microsoft Edge [17+]
+- Google Chrome [70+]
+- Mozilla Firefox [63+]
+- Safari 11+
 
 
 - Windows 10+
 - OSX 10.10+
-- iOS 11.2+
+- iOS 11.4+
 - Android 5.1+
 
 This list is not meant to be definitive, just an example of what is meant by
-"modern" browsers (actively supported, widely used, etc.).
+"modern" browsers (actively supported, widely used, etc.). Generally speaking, we
+should support the two latest versions of a browser/family.
 
 Note that client location may also influnce the set of supported browsers. For
 example, Opera Mini is rarely used in the U.S., but is roughly 5% of the global
