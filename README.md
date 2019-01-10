@@ -16,7 +16,7 @@ browsers using modern Operating Systems. As of Jan 2019, that list includes:
 - Mozilla Firefox [63+]
 - Safari 11+
 
-
+Operating Systems:
 - Windows 10+
 - OSX 10.10+
 - iOS 11.4+
