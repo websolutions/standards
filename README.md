@@ -8,19 +8,18 @@ important pieces of development.
 
 ### Device and Browser Support
 A project SOW may declare required support. If not, we support "modern"
-browsers using modern Operating Systems. As of Jan 2019, that list includes:
+browsers using modern Operating Systems. As of Mar 2021, that list includes:
 
-- Internet Explorer 11
-- Microsoft Edge [17+]
-- Google Chrome [70+]
-- Mozilla Firefox [63+]
-- Safari 11+
+- Microsoft Edge [88+]
+- Google Chrome [88+]
+- Mozilla Firefox [85+]
+- Safari 14+
 
 Operating Systems:
 - Windows 10+
-- OSX 10.10+
-- iOS 11.4+
-- Android 5.1+
+- OSX 10.15+
+- iOS 14.2+
+- Android 9+
 
 This list is not meant to be definitive, just an example of what is meant by
 "modern" browsers (actively supported, widely used, etc.). Generally speaking, we
@@ -40,15 +39,7 @@ to ensure content is visible and accessible in browsers we do *not* officially
 support, those with non-standard settings (such as JavaScript being disabled),
 or those using assistive devices such as screen readers.
 
-We have dev boxes set up with various versions of Internet Explorer to test with using RDP:
-- ie8.wsoldev.com
-- ie9.wsoldev.com
-- ie10.wsoldev.com
-- ie11.wsoldev.com
-
-You can also use local virtual machines to test using:
-- [VirtualBox](VirtualBox), and
-- [modern.ie](http://modern.ie)
+You can also use remote virtual machines to test using [BrowserStack](https://live.browserstack.com/dashboard).
 
 #### Using Modern Technologies
 Performance and Progressive Enhancement must be top priorities when deciding
@@ -56,7 +47,6 @@ what is appropriate to use.
 
 Helpful sites and technologies:
 - [caniuse.com](http://caniuse.com)
-- [Modernizr](http://modernizr.com) for testing browser capabilities
 - JavaScript polyfills
 
 
